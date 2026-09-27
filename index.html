@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>For Zavier</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,19 +14,29 @@
 
   <div class="stars"></div>
 
+
+  <!-- OPENING -->
+
   <section class="opening" id="opening">
+
     <div class="envelope" onclick="openLetter()">
+
       <div class="flap"></div>
 
       <div class="paper">
         <span>for</span>
         <h2>Zavier</h2>
       </div>
+
     </div>
 
     <p class="hint">tap the envelope</p>
+
   </section>
 
+
+
+  <!-- BIRTHDAY -->
 
   <section class="birthday" id="birthday">
 
@@ -45,7 +58,128 @@
   </section>
 
 
+
+  <!-- MEMORY -->
+
+  <section class="memory" id="memory">
+
+    <p class="section-small">A LITTLE SOMETHING</p>
+
+    <h1>Do you remember?</h1>
+
+    <p class="memory-text">
+      mungkin beberapa hal kecil terasa biasa,
+      tapi entah kenapa semuanya jadi punya cerita
+      setelah kamu datang.
+    </p>
+
+
+    <div class="photo-card">
+
+      <div class="photo-placeholder">
+        <span>your photo<br>will be here</span>
+      </div>
+
+      <p>one of many memories.</p>
+
+    </div>
+
+
+    <button onclick="letterPage()">
+      read something →
+    </button>
+
+  </section>
+
+
+
+  <!-- LETTER -->
+
+  <section class="letter-page" id="letterPage">
+
+    <p class="section-small">A LETTER FOR YOU</p>
+
+    <h1>Dear Zavier,</h1>
+
+    <div class="letter">
+
+      <p>
+        Happy birthday, Vier.
+      </p>
+
+      <p>
+        Aku sebenarnya nggak terlalu tahu harus mulai
+        dari mana, karena ada banyak hal yang pengin
+        aku bilang. Tapi mungkin yang paling sederhana
+        adalah terima kasih.
+      </p>
+
+      <p>
+        Terima kasih karena pernah datang dan membuat
+        hari-hari di CHB jadi terasa sedikit lebih ramai.
+        Sebelum kamu datang, semuanya terasa biasa saja.
+        Tapi entah bagaimana, setelah ada kamu, ada banyak
+        hal kecil yang jadi lebih menyenangkan.
+      </p>
+
+      <p>
+        Kamu itu memang wong unik. Kadang random,
+        kadang ngeselin, kadang sibuk sendiri, tapi
+        tetap jadi seseorang yang menyenangkan untuk
+        dikenal.
+      </p>
+
+      <p>
+        Semoga di umur yang baru ini kamu menemukan
+        banyak hal baik. Semoga semua yang sedang kamu
+        perjuangkan bisa berjalan dengan baik, dan semoga
+        kamu tetap menjadi Zavier yang aku kenal.
+      </p>
+
+      <p>
+        Sekali lagi, happy birthday, Vier.
+        Jangan berubah jadi wong normal ya.
+      </p>
+
+    </div>
+
+    <button onclick="endingPage()">
+      one last thing →
+    </button>
+
+  </section>
+
+
+
+  <!-- ENDING -->
+
+  <section class="ending" id="ending">
+
+    <p class="section-small">AND FINALLY...</p>
+
+    <h1>Thank you.</h1>
+
+    <p>
+      for being one of the best
+      hadiah I've ever gotten in CHB.
+    </p>
+
+    <h2>Zavier Siregar.</h2>
+
+    <p class="small-ending">
+      — Ceyrena
+    </p>
+
+    <button onclick="location.reload()">
+      replay ↻
+    </button>
+
+  </section>
+
+
+
   <script src="script.js"></script>
 
 </body>
+
 </html>
