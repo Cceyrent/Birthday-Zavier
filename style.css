@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --navy: #050d1b;
+  --blue: #16365c;
+  --sky: #91b9dc;
+  --silver: #dce7f2;
+  --white: #f8fbff;
+  --muted: #aebfd1;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #193e66,
+      #071426 55%,
+      #020711
+    );
+}
+
+
+/* BINTANG */
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+
+  background-image:
+    radial-gradient(white 1px, transparent 1px);
+
+  background-size: 70px 70px;
+}
+
+
+/* HALAMAN PEMBUKA */
+
+.opening,
+.birthday {
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* AMPLOP */
+
+.envelope {
+  width: 250px;
+  height: 165px;
+
+  position: relative;
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+
+  transition: 0.6s;
+}
+
+.envelope:hover {
+  transform: translateY(-8px);
+}
+
+
+/* BADAN AMPLOP */
+
+.envelope::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: #183c61;
+
+  border-radius: 5px;
+
+  box-shadow:
+    0 20px 50px #0008;
+}
+
+
+/* PENUTUP AMPLOP */
+
+.flap {
+  position: absolute;
+
+  z-index: 3;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 0;
+
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  border-top: 90px solid #2b5b87;
+
+  transform-origin: top;
+
+  transition: 0.7s;
+}
+
+
+/* KERTAS */
+
+.paper {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 20px;
+  bottom: 15px;
+
+  width: 210px;
+  height: 120px;
+
+  padding-top: 30px;
+
+  text-align: center;
+
+  color: #10243b;
+
+  background: #f4f5f3;
+
+  border-radius: 3px;
+}
+
+.paper span {
+  display: block;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+}
+
+.paper h2 {
+  margin: 5px 0;
+
+  font-size: 30px;
+}
+
+
+/* TULISAN BAWAH AMPLOP */
+
+.hint {
+  margin-top: 30px;
+
+  color: #b9cee1;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+}
+
+
+/* HALAMAN BIRTHDAY */
+
+.birthday {
+  display: none;
+
+  padding: 30px;
+
+  text-align: center;
+}
+
+
+/* TANGGAL */
+
+.date {
+  color: #9fc6e7;
+
+  letter-spacing: 5px;
+
+  font-size: 12px;
+}
+
+
+/* JUDUL */
+
+h1 {
+  margin: 15px 0 0;
+
+  font-size:
+    clamp(45px, 12vw, 80px);
+}
+
+.birthday h2 {
+  margin: 5px 0 25px;
+
+  font-size:
+    clamp(28px, 7vw, 45px);
+}
+
+
+/* TEKS */
+
+.intro {
+  max-width: 500px;
+
+  line-height: 1.8;
+
+  color: #d8e5f0;
+}
+
+
+/* BUTTON */
+
+button {
+  margin-top: 25px;
+
+  padding: 13px 23px;
+
+  border: 1px solid #9fc6e7;
+
+  border-radius: 30px;
+
+  background: #123354;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+
+  background: #1b4b78;
+}
+
+
+/* ANIMASI AMPLOP */
+
+.open .flap {
+  transform: rotateX(180deg);
+}
+
+
+/* ANIMASI MUNCUL */
+
+.fade {
+  animation:
+    fade 0.9s ease forwards;
+}
+
+@keyframes fade {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
